@@ -4,9 +4,9 @@ const router = express.Router();
 const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
-  cloud_name: "dubqn2x9j",
-  api_key: "474378529513631",
-  api_secret: "8TOyIUoTNCYSlkUIPLHWWNtFj84",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 const User = require("../models/User");
