@@ -13,7 +13,7 @@ const Offer = require("../models/Offer");
 const convertToBase64 = require("../utils/convertToBase64");
 const isAuthenticated = require("../utils/isAuthenticated");
 
-router.get("/offers", isAuthenticated, async (req, res) => {
+router.get("/offers", async (req, res) => {
   try {
     const { title, priceMin, priceMax, sort, page } = req.query;
     const querysFind = {};
