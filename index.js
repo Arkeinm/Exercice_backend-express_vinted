@@ -8,7 +8,7 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 
-mongoose.connect(process.env.MONGONDB_URI);
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGONDB_CLOUD);
 
 const Login = require("./routes/user");
 app.use(Login);
